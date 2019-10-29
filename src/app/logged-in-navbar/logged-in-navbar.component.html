@@ -1,43 +1,35 @@
-<div style="height: 70px;">
-    <mat-toolbar color="primary">
-      <mat-toolbar-row>
-        <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
-          <mat-icon>menu</mat-icon>
-        </button>
-        <div class="logo-image">
-            <img src="../../assets/images/logo.png" class="img-fluid">
-        </div>
-        <span>newsZoid</span>
-        <span class="menu-spacer"></span>
-        <div fxShow="true" fxHide.lt-md>
-          <!-- The following menu items will be hidden on both SM and XS screen sizes -->
-          <a href="#" mat-button>Your Profile</a>
-          <a href="#" mat-button>Upload news</a>
-          <a href="#" mat-button>Edit profile</a>
-          <a href="#" mat-button>Remove account</a>
-          <!-- <a href="#" mat-button>Menu Item 3</a>
-          <a href="#" mat-button>Menu Item 4</a>
-          <a href="#" mat-button>Menu Item 5</a>
-          <a href="#" mat-button>Menu Item 6</a> -->
-        </div>
-      </mat-toolbar-row>
-    </mat-toolbar>
-  
-    <mat-sidenav-container fxFlexFill>
-      <mat-sidenav #sidenav>
-        <mat-nav-list>
-          <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
-          <a href="#" mat-list-item>Your Profile</a>
-          <a href="#" mat-list-item>Upload news</a>
-          <a href="#" mat-list-item>Edit profile</a>
-          <a href="#" mat-list-item>Remove account</a>
-          <!-- <a href="#" mat-list-item>Menu Item 3</a>
-          <a href="#" mat-list-item>Menu Item 4</a>
-          <a href="#" mat-list-item>Menu Item 5</a>
-          <a href="#"mat-list-item>Menu Item 6</a> -->
-        </mat-nav-list>
-      </mat-sidenav>
-      <!-- <mat-sidenav-content fxFlexFill>Main content</mat-sidenav-content> -->
-     </mat-sidenav-container>
-  </div>
-  
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #e3f2fd;">
+    <div class="logo-image">
+        <img src="../../assets/images/logo.png" class="img-fluid">
+    </div>
+    <a class="navbar-brand" href="#">newsZoid</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Upload videos</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Your profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Edit profile</a>
+                    <a class="dropdown-item" href="#">View posts</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Remove account</a>
+                </div>
+            </li>
+
+        </ul>
+
+    </div>
+</nav>
