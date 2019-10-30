@@ -139,7 +139,7 @@ export class UserRegistrationComponent implements OnInit {
       }
 
       // display form values on success
-      alert('SUCCESS!! :-)\n\n');
+      // alert('SUCCESS!! :-)\n\n');
       //alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.firstFormGroup.value, null, 4));
   }
 
