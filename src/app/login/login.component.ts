@@ -25,8 +25,11 @@ export class LoginComponent implements OnInit {
     };
     user.username = myForm.value.username;
     user.password = myForm.value.password;
-    console.log('user: ', user);
+    // console.log('user: ', user);
     this.authenticationService.loginUser(user).subscribe(data=>{
+      let obj = data;
+      let jwt = obj.jwtToken;
+      localStorage.setItem('jwt', jwt);
       console.log(data);
       this.router.navigateByUrl('/dashboard');
     },error=>{

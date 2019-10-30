@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DashboardService } from '../services/dashboard.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dashboard:DashboardService) { }
 
   ngOnInit() {
+    console.log(localStorage.getItem('jwt'));
+      let obj = this.dashboard.checkToken(JSON.stringify(localStorage.getItem('jwt')));
+      console.log("sur " + obj);
+      let username = obj.sub;
+      console.log(username);
+      this.dashboard.getUser(username).subscribe((data) => {
+        console.log(data);
+      })
   }
 
     // Number of cards to be generated with column and rows to be covered  

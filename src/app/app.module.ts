@@ -25,13 +25,6 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import {LoginComponent} from './login/login.component';
 import { MyPostsComponent } from './my-posts/my-posts.component';
 
-
-
-
-
-
-
-
 @NgModule({
   declarations: [AppComponent, LoggedInNavbarComponent, VideoComponent, DashboardComponent, UserRegistrationComponent, LoggedOutNavbarComponent,TrendingvideosComponent, JumbotronComponent,CarouselComponent, LandingPageComponent,LoginComponent, MyPostsComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule,

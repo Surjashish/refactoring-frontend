@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class UserRegistration {
 
   constructor(private http:HttpClient) { }
-   private _url = 'http://localhost:8080/registration-service/api/v1/register';
+   private _url = 'http://13.235.222.93:8080/registration-service/api/v1/register';
 
 
   saveUser(userObj): any

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ViewUploadsService {
 
-  private url = 'http:/localhost:8080/registration-service/api/v1/register/{username}';
+  private url = 'http:/13.235.222.93:8080/registration-service/api/v1/register/{username}';
 
   constructor(private http: HttpClient) { }
 
