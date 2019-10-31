@@ -9,16 +9,15 @@ import { ViewUploadsService } from '../services/view-uploads.service';
 })
 export class MyPostsComponent implements OnInit {
 
-  private news : import("./upload").Video;
+  posts:any;
 
   constructor(private _newsService : ViewUploadsService) { }
 
   ngOnInit() {
 
-    this._newsService.getNews()
-    .subscribe(data =>{
+    this._newsService.getUser().subscribe(data =>{
         console.log(data);
-        this.news = data;
+        this.posts = data['posts'];
       });
   }
 

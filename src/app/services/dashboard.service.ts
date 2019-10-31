@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-// import { JwtHelperService } from '@auth0/angular-jwt/src/jwthelper.service';
 import { JwtHelperService } from "@auth0/angular-jwt";
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 
@@ -30,7 +29,7 @@ export class DashboardService {
   getUser(username) {
     let headers = this.httpOptions.headers;
     console.log('headers: ',headers);
-    return this.http.get<any>('http://13.235.222.93:8080/registration-service/api/v1/register/'+username, this.httpOptions);
+    return this.http.get<any>('http://localhost:8080/registration-service/api/v1/register/'+username, this.httpOptions);
   }
 
 }
