@@ -14,7 +14,7 @@ export class AuthenticationService {
   constructor(private http:HttpClient) { }
 
   loginUser(user:User):any{
-    let url = "http://localhost:8080/login-service/api/v1/authenticate";
+    let url = "http://13.235.222.93:8080/login-service/api/v1/authenticate";
     return this.http.post(url,user,httpOptions);
     // let url = "http://localhost:9090/api/v1/authenticate";
     // return this.http.post(url, user, httpOptions);

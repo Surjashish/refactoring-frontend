@@ -29,7 +29,7 @@ export class DashboardService {
   getUser(username) {
     let headers = this.httpOptions.headers;
     console.log('headers: ',headers);
-    return this.http.get<any>('http://localhost:8080/registration-service/api/v1/register/'+username, this.httpOptions);
+    return this.http.get<any>('http://13.235.222.93:8080/registration-service/api/v1/register/'+username, this.httpOptions);
   }
 
 }

@@ -14,7 +14,7 @@ export class ViewUploadsService {
   getUser() {
     let obj = this.checkToken(JSON.stringify(localStorage.getItem('jwt')));
     let username = obj.sub;
-    let url = 'http://localhost:8080/registration-service/api/v1/register/'+username;
+    let url = 'http://13.235.222.93:8080/registration-service/api/v1/register/'+username;
     return this.http.get(url);
     // let posts = JSON.stringify(user);
     // console.log(user);
